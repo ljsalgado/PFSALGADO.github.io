@@ -1,5 +1,11 @@
 $background-image-url: url('../img/espejo.jpg');
+$font-family: Arial, sans-serif;
+$video-width: 320px; // Ancho deseado para los videos en vista celular
 
+
+.imagen-redondeada {
+    border-radius: 6px;
+}
 
 .feature {
   display: inline-flex;
@@ -23,6 +29,7 @@ $background-image-url: url('../img/espejo.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
 
   .text-overlay {
     position: absolute;
@@ -108,4 +115,118 @@ $background-image-url: url('../img/espejo.jpg');
       margin: 5px auto;
     }
   }
+}
+
+.recuadro {
+    border: 2px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+
+    &.nombre {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    color: #e9e5ae;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.fondopromo {
+    /* Estilos para el fondo */
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #ccc;
+    
+
+
+    .text-overlaypromo {
+        /* Estilos para el contenido superpuesto */
+        display: flex;
+        flex-direction: row; /* Por defecto, horizontal en escritorio */
+        flex-wrap: wrap;
+        gap: 20px;
+
+        .item {
+            flex: 0 0 calc(33.33% - 20px); /* Tres columnas por fila */
+            text-align: center;
+
+            p {
+                margin-top: 10px;
+            }
+        }
+    }
+
+    /* Cambio a disposición vertical en versión móvil */
+    @media (max-width: 768px) {
+        .text-overlaypromo {
+            flex-direction: column;
+        }
+    }
+}
+
+.custom-page {
+    font-family: $font-family;
+    text-align: center;
+    background-color: #ccc;
+  
+    #encabezado {
+      margin-top: 20px;
+    }
+  
+    .video-container {
+      margin: 20px auto;
+      max-width: 100%;
+  
+      h2 {
+        margin-bottom: 10px;
+      }
+  
+      iframe {
+        width: $video-width;
+        height: calc(#{$video-width} * 0.5625); // Mantener relación de aspecto 16:9
+      }
+    }
+}
+
+.enlaceyoutube {
+    text-decoration: none; 
+    color: red; 
+}
+
+.estilohistoria {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .estilohistoria {
+      font-size: 16px; /* Ajusta el tamaño del texto para móviles */
+  }
+}
+
+.centered-text {
+  text-align: center;
+  background-color: #ccc;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 30px;
 }

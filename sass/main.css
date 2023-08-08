@@ -1,3 +1,8 @@
+@charset "UTF-8";
+.imagen-redondeada {
+  border-radius: 6px;
+}
+
 .feature {
   display: inline-flex;
   align-items: center;
@@ -107,4 +112,105 @@
     text-align: left;
     margin: 5px auto;
   }
+}
+.recuadro {
+  border: 2px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  color: #e9e5ae;
+  font-size: 15px;
+  font-weight: 900;
+}
+.recuadro.nombre {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.fondopromo {
+  /* Estilos para el fondo */
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: #ccc;
+  /* Cambio a disposición vertical en versión móvil */
+}
+.fondopromo .text-overlaypromo {
+  /* Estilos para el contenido superpuesto */
+  display: flex;
+  flex-direction: row; /* Por defecto, horizontal en escritorio */
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.fondopromo .text-overlaypromo .item {
+  flex: 0 0 calc(33.33% - 20px); /* Tres columnas por fila */
+  text-align: center;
+}
+.fondopromo .text-overlaypromo .item p {
+  margin-top: 10px;
+}
+@media (max-width: 768px) {
+  .fondopromo .text-overlaypromo {
+    flex-direction: column;
+  }
+}
+
+.custom-page {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #ccc;
+}
+.custom-page #encabezado {
+  margin-top: 20px;
+}
+.custom-page .video-container {
+  margin: 20px auto;
+  max-width: 100%;
+}
+.custom-page .video-container h2 {
+  margin-bottom: 10px;
+}
+.custom-page .video-container iframe {
+  width: 320px;
+  height: calc(320px * 0.5625);
+}
+
+.enlaceyoutube {
+  text-decoration: none;
+  color: red;
+}
+
+.estilohistoria {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .estilohistoria {
+    font-size: 16px; /* Ajusta el tamaño del texto para móviles */
+  }
+}
+.centered-text {
+  text-align: center;
+  background-color: #ccc;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-size: 30px;
 }/*# sourceMappingURL=main.css.map */
