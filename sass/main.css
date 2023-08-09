@@ -166,10 +166,10 @@
   background-color: #ccc;
 }
 .custom-page #encabezado {
-  margin-top: 20px;
+  margin-top: 0px;
 }
 .custom-page .video-container {
-  margin: 20px auto;
+  margin: auto;
   max-width: 100%;
 }
 .custom-page .video-container h2 {
